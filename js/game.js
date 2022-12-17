@@ -1,7 +1,9 @@
 var userPoints = 0, computerPoints = 0;
 
 while (userPoints + computerPoints < 4) {
+  if (userPoints <= 3 && computerPoints <= 3) {
    playGame();
+  }  
 } 
 
 if (userPoints === 3 || computerPoints === 3) {
