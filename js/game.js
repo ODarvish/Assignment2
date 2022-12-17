@@ -8,14 +8,13 @@ while (userPoints + computerPoints < 5) {
   }  
 } 
 
-if (userPoints === 3 || computerPoints === 3) {
-  if (userPoints === 3) {
-    alert ("CONGRATULATIONS! YOU ARE THE BIG WINNER.");
-  }  
-  else {
-    alert ("SORRY! YOU LOST.");
-  }  
+if (userPoints === 3) {
+  alert ("CONGRATULATIONS! YOU ARE THE BIG WINNER.");
 }  
+else {
+  alert ("SORRY! YOU LOST.");
+}  
+
 
 function computerSelection() {
     let choices = ["rock", "paper", "scissors"];
