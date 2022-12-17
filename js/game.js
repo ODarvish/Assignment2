@@ -1,8 +1,10 @@
 var userPoints = 0, computerPoints = 0;
 
-while (userPoints + computerPoints < 4) {
-  if (userPoints <= 3 && computerPoints <= 3) {
+while (userPoints + computerPoints < 5) {
+  if (userPoints < 3 && computerPoints < 3) {
    playGame();
+  }  else {
+    break;
   }  
 } 
 
@@ -46,18 +48,18 @@ function determineWinner(userInput, computerInput) {
 
   if (userInput === "rock") {
     if (computerInput === "paper") {
-      computerPoints = computerPoints + 1;
+      computerPoints++;
       return "Computer Wins!"
     } else {
-      userPoints = userPoints + 1;
+      userPoints++;
       return "You win!"
     }
   } else if (userInput === "paper") {
     if (computerInput === "scissors") {
-      computerPoints = computerPoints + 1;
+      computerPoints++;
       return "Computer Wins!"
     } else {
-      userPoints = userPoints + 1;
+      userPoints++;
       return "You win!"
     }
   } else {
