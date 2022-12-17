@@ -62,10 +62,10 @@ function determineWinner(userInput, computerInput) {
     }
   } else {
     if (computerInput === "rock") {
-      computerPoints = computerPoints + 1;
+      computerPoints++;
       return "Computer Wins!"
     } else {
-      userPoints = userPoints + 1;
+      userPoints++;
       return "You win!"
     }
   }
