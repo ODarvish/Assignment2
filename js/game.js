@@ -9,30 +9,30 @@ while (userPoints + computerPoints < 5) {
 } 
 
 if (userPoints === 3) {
-  alert ("CONGRATULATIONS! YOU ARE THE BIG WINNER.");
+  alert ("First to win 3 games is the champion! Your score: " + userPoints + " | Computer score: " + computerPoints + "\n" +"CONGRATULATIONS! YOU ARE THE BIG WINNER.");
 }  
 else {
-  alert ("SORRY! YOU LOST.");
+  alert ("First to win 3 games is the champion! Your score: " + userPoints + " | Computer score: " + computerPoints + "\n" +"SORRY! YOU LOST.");
 }  
-
 
 function computerSelection() {
     let choices = ["rock", "paper", "scissors"];
     return choices[Math.floor(Math.random() * choices.length)];
   }
   
-function userSelection(tie) {
+function userSelection(Tie) {
   let userInput = "";
-  userInput = userInput.toLocaleLowerCase();
 
-  while (!(userInput.toLocaleLowerCase() === "r" || userInput.toLocaleLowerCase() === "p" || userInput.toLocaleLowerCase() === "s")) {
-    userInput = prompt(tie + "\nEnter 'R' for rock, 'P' for paper or 'S' for scissors");
+  while (!(userInput.toLowerCase() === "r" || userInput.toLowerCase() === "p" || userInput.toLowerCase() === "s")) {
+    userInput = prompt("First to win 3 games is the champion! Your score: " + userPoints + " | Computer score: " + computerPoints + "\n" + Tie + "\nEnter 'R' for rock, 'P' for paper or 'S' for scissors");
     
     if (userInput === null) {
       alert("You choose cancel the game");
       exit;
     }
   }
+
+  userInput = userInput.toLowerCase();
 
   if (userInput === "r") userInput = "rock"; 
   else if (userInput === "p") userInput = "paper";
@@ -41,6 +41,7 @@ function userSelection(tie) {
   }
   
 function determineWinner(userInput, computerInput) {
+  console.log(userInput);
   if (userInput === computerInput) {
     return "tie";
   }
