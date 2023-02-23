@@ -1,8 +1,18 @@
 Hi Omid! 
 
+--------------------------------
+
+Updated 23-2-2023
+
+Hi Omid, I'm happy to say you squashed the bug and it runs perfctly. Congrats, Välgoddkänt!
+
+Sorry it took me so long to re-assess.
+
+--------------------------------
+
 Nice work! The game works great most of the time, and as you see below you have achieved most of the requirements. The code is nice and clean, but theres a few small issues:
 
-It's a little confusing because the user doesn't know how many games they aree playing and what their current score is. 
+It's a little confusing because the user doesn't know how many games they are playing and what their current score is. 
 
 There is a small bug in the game which mean sometimes the wrong result is returned. Enter "R", "S" or "P" in the prompt then add a console.log(userInput) at line 44 to see what the userInput is that you are passing to the determineWinner function: 
 
